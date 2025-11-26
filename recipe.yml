@@ -12,6 +12,7 @@ install:
   - field
   - indexing_study
   - menu_ui
+  - mesh_formatter
   - node
   - options
   - rest
