@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.ais_document_import
+    - field.storage.feeds_feed.field_ais_study
+    - node.type.ais_study
+  module:
+    - epp
+third_party_settings:
+  epp:
+    value: '[current-page:query:study]'
+    on_update: 0
+id: feeds_feed.ais_document_import.field_ais_study
+field_name: field_ais_study
+entity_type: feeds_feed
+bundle: ais_document_import
+label: Study
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ais_study: ais_study
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
