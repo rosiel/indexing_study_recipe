@@ -13,7 +13,7 @@
     "drupal/token": "^1.16",
     "drupal/views_core_entity_reference": "^1.0@alpha",
     "drupal/views_data_export": "^1.8",
-    "rosiel/indexing_study": "2.x-dev" 
+    "rosiel/indexing_study": "2.x-dev",
     "rosiel/mesh_formatter": "dev-main" 
   },
   "suggest": {
