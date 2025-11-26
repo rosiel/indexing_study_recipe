@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ais_analyses
+    - node.type.ais_consensus
+    - node.type.ais_subject_analysis
+  module:
+    - epp
+third_party_settings:
+  epp:
+    value: '[current-page:query:analyses]'
+    on_update: 0
+id: node.ais_consensus.field_ais_analyses
+field_name: field_ais_analyses
+entity_type: node
+bundle: ais_consensus
+label: Analyses
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ais_subject_analysis: ais_subject_analysis
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

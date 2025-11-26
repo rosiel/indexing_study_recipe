@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ais_subject_analysis.field_ais_assignment
+    - field.field.node.ais_subject_analysis.field_ais_document
+    - field.field.node.ais_subject_analysis.field_ais_subjects
+    - node.type.ais_subject_analysis
+  module:
+    - user
+id: node.ais_subject_analysis.default
+targetEntityType: node
+bundle: ais_subject_analysis
+mode: default
+content:
+  field_ais_assignment:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_ais_document:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_ais_subjects:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

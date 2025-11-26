@@ -1,0 +1,21 @@
+{
+  "name": "rosiel/indexing_study_recipe",
+  "description": "Configuration required by indexing study module.",
+  "type": "drupal-recipe",
+  "require": {
+    "drupal/core": "^11",
+    "drupal/auto_entitylabel": "^3.4",
+    "drupal/better_exposed_filters": "^7.0",
+    "drupal/epp": "^1.7",
+    "drupal/feeds": "^3.0",
+    "drupal/feeds_ex": "^1.0@beta",
+    "drupal/field_group": "^4.0",
+    "drupal/token": "^1.16",
+    "drupal/views_core_entity_reference": "^1.0@alpha",
+    "drupal/views_data_export": "^1.8",
+    "rosiel/indexing_study": "2.x-dev" 
+  },
+  "suggest": {
+  },
+  "license": "GPL-2.0-or-later"
+}

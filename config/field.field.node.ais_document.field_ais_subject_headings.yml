@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ais_subject_headings
+    - node.type.ais_document
+id: node.ais_document.field_ais_subject_headings
+field_name: field_ais_subject_headings
+entity_type: node
+bundle: ais_document
+label: 'Subject Headings'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

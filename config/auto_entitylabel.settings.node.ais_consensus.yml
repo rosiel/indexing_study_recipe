@@ -1,0 +1,10 @@
+status: 1
+pattern: 'Consensus for [node:field_ais_document:entity:nid]'
+escape: false
+preserve_titles: false
+save: true
+chunk: 50
+dependencies:
+  config:
+    - node.type.ais_consensus
+new_content_behavior: 0

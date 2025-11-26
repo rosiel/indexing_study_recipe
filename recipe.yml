@@ -1,0 +1,176 @@
+name: 'Indexing Study Recipe'
+description: 'Generated recipe.'
+type: Site
+install:
+  - auto_entitylabel
+  - better_exposed_filters
+  - csv_serialization
+  - epp
+  - feeds
+  - feeds_ex
+  - feeds_log
+  - field
+  - indexing_study
+  - menu_ui
+  - node
+  - options
+  - rest
+  - serialization
+  - system
+  - user
+  - views
+  - views_data_export
+config:
+  import:
+    auto_entitylabel:
+      - auto_entitylabel.settings.feeds_feed.ais_document_import
+      - auto_entitylabel.settings.node.ais_agreement
+      - auto_entitylabel.settings.node.ais_assignment
+      - auto_entitylabel.settings.node.ais_consensus
+      - auto_entitylabel.settings.node.ais_subject_analysis
+    feeds:
+      - feeds.feed_type.ais_document_import
+    field:
+      - field.field.node.pmid
+      - field.field.node.study_description
+    node:
+      - core.entity_form_display.node.ais_agreement.default
+      - core.entity_form_display.node.ais_assignment.default
+      - core.entity_form_display.node.ais_consensus.default
+      - core.entity_form_display.node.ais_document.default
+      - core.entity_form_display.node.ais_study.default
+      - core.entity_form_display.node.ais_subject_analysis.default
+      - core.entity_view_display.node.ais_agreement.default
+      - core.entity_view_display.node.ais_assignment.default
+      - core.entity_view_display.node.ais_consensus.default
+      - core.entity_view_display.node.ais_document.default
+      - core.entity_view_display.node.ais_study.default
+      - core.entity_view_display.node.ais_subject_analysis.default
+      - core.entity_view_mode.node.teaser
+      - field.field.node.ais_agreement.field_ais_agreement
+      - field.field.node.ais_agreement.field_ais_consensus
+      - field.field.node.ais_agreement.field_ais_disagreement_type
+      - field.field.node.ais_agreement.field_ais_document
+      - field.field.node.ais_agreement.field_ais_notes
+      - field.field.node.ais_assignment.field_ais_document
+      - field.field.node.ais_assignment.field_ais_reviewer
+      - field.field.node.ais_consensus.field_ais_analyses
+      - field.field.node.ais_consensus.field_ais_document
+      - field.field.node.ais_consensus.field_ais_subjects
+      - field.field.node.ais_document.feeds_item
+      - field.field.node.ais_document.field_ais_abstract
+      - field.field.node.ais_document.field_ais_journal_name
+      - field.field.node.ais_document.field_ais_study
+      - field.field.node.ais_document.field_ais_subject_headings
+      - field.field.node.ais_document.field_ais_title
+      - field.field.node.ais_document.field_pmid
+      - field.field.node.ais_study.field_ais_participants
+      - field.field.node.ais_study.field_study_description
+      - field.field.node.ais_subject_analysis.field_ais_assignment
+      - field.field.node.ais_subject_analysis.field_ais_document
+      - field.field.node.ais_subject_analysis.field_ais_subjects
+      - field.storage.node.feeds_item
+      - field.storage.node.field_ais_abstract
+      - field.storage.node.field_ais_agreement
+      - field.storage.node.field_ais_analyses
+      - field.storage.node.field_ais_assignment
+      - field.storage.node.field_ais_consensus
+      - field.storage.node.field_ais_disagreement_type
+      - field.storage.node.field_ais_document
+      - field.storage.node.field_ais_journal_name
+      - field.storage.node.field_ais_notes
+      - field.storage.node.field_ais_participants
+      - field.storage.node.field_ais_reviewer
+      - field.storage.node.field_ais_study
+      - field.storage.node.field_ais_subject_headings
+      - field.storage.node.field_ais_subjects
+      - field.storage.node.field_ais_title
+      - field.storage.node.field_pmid
+      - field.storage.node.field_study_description
+      - node.type.ais_agreement
+      - node.type.ais_assignment
+      - node.type.ais_consensus
+      - node.type.ais_document
+      - node.type.ais_study
+      - node.type.ais_subject_analysis
+    user:
+      - user.role.administrator
+      - user.role.is_manager
+      - user.role.is_participant
+    views:
+      - views.view.is_agreements
+      - views.view.is_assignments
+      - views.view.is_consensus
+      - views.view.is_documents
+      - views.view.is_results
+      - views.view.is_reviews
+      - views.view.studies.yml
+  actions:
+    user.role.is_manager:
+      grantPermissions:
+        - 'add documents'
+        - 'analyze documents'
+        - 'assign documents'
+        - 'clear ais_document_import feeds'
+        - 'create agreement'
+        - 'create ais_agreement content'
+        - 'create ais_assignment content'
+        - 'create ais_consensus content'
+        - 'create ais_document content'
+        - 'create ais_document_import feeds'
+        - 'create ais_study content'
+        - 'create ais_subject_analysis content'
+        - 'create consensus'
+        - 'delete ais_document_import feeds'
+        - 'delete any ais_agreement content'
+        - 'delete any ais_assignment content'
+        - 'delete any ais_consensus content'
+        - 'delete any ais_document content'
+        - 'delete any ais_study content'
+        - 'delete any ais_subject_analysis content'
+        - 'edit any ais_agreement content'
+        - 'edit any ais_assignment content'
+        - 'edit any ais_consensus content'
+        - 'edit any ais_document content'
+        - 'edit any ais_study content'
+        - 'edit any ais_subject_analysis content'
+        - 'import ais_document_import feeds'
+        - 'revert ais_agreement revisions'
+        - 'revert ais_assignment revisions'
+        - 'revert ais_consensus revisions'
+        - 'revert ais_document revisions'
+        - 'revert ais_study revisions'
+        - 'revert ais_subject_analysis revisions'
+        - 'unlock ais_document_import feeds'
+        - 'view ais_agreement revisions'
+        - 'view ais_assignment revisions'
+        - 'view ais_consensus revisions'
+        - 'view ais_document revisions'
+        - 'view ais_document_import feeds'
+        - 'view ais_study revisions'
+        - 'view ais_subject_analysis revisions'
+        - 'view own ais_document_import feeds'
+        - 'view the administration theme'
+    user.role.is_participant:
+      grantPermissions:
+        - 'analyze documents'
+        - 'create ais_agreement content'
+        - 'create ais_assignment content'
+        - 'create ais_consensus content'
+        - 'create ais_subject_analysis content'
+        - 'delete any ais_agreement content'
+        - 'delete any ais_assignment content'
+        - 'delete any ais_consensus content'
+        - 'edit any ais_agreement content'
+        - 'edit any ais_assignment content'
+        - 'edit any ais_consensus content'
+        - 'edit own ais_subject_analysis content'
+        - 'revert ais_agreement revisions'
+        - 'revert ais_assignment revisions'
+        - 'revert ais_consensus revisions'
+        - 'revert ais_subject_analysis revisions'
+        - 'view ais_agreement revisions'
+        - 'view ais_assignment revisions'
+        - 'view ais_consensus revisions'
+        - 'view ais_subject_analysis revisions'
+        - 'view the administration theme'

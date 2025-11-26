@@ -1,0 +1,10 @@
+status: 1
+pattern: 'Assignment: [node:field_ais_document:entity:nid] to [node:field_ais_reviewer]'
+escape: false
+preserve_titles: false
+save: true
+chunk: 50
+dependencies:
+  config:
+    - node.type.ais_assignment
+new_content_behavior: 0

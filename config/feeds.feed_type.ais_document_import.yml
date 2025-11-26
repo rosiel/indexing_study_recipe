@@ -1,0 +1,160 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ais_document.field_ais_abstract
+    - field.field.node.ais_document.field_ais_journal_name
+    - field.field.node.ais_document.field_ais_study
+    - field.field.node.ais_document.field_ais_subject_headings
+    - field.field.node.ais_document.field_ais_title
+    - node.type.ais_document
+  module:
+    - feeds_ex
+    - feeds_log
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+label: 'AIS Ovid Document Import'
+id: ais_document_import
+description: 'Import documents into a study from OVID XML'
+help: ''
+import_period: -1
+import_period_per_feed: false
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: xml
+  directory: 'public://feeds'
+parser: xml
+parser_configuration:
+  context:
+    value: ovidresults/records/record
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: ais_document
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+custom_sources:
+  ovid_title:
+    label: 'Ovid Title'
+    machine_name: ovid_title
+    value: 'F[@C="ti"]/D'
+    raw: false
+    inner: false
+    type: xml
+  ovid_abstract:
+    label: 'Ovid Abstract'
+    machine_name: ovid_abstract
+    value: 'F[@C="ab"]/D'
+    raw: false
+    inner: false
+    type: xml
+  ovid_journal_name:
+    label: 'Ovid Journal Name'
+    machine_name: ovid_journal_name
+    value: 'F[@C="so"]/D'
+    raw: false
+    inner: false
+    type: xml
+  ovid_document_id:
+    label: 'Ovid Document ID'
+    machine_name: ovid_document_id
+    value: 'F[@C="id"]/D'
+    raw: false
+    inner: false
+    type: xml
+  ovid_mesh_subject_headings:
+    label: 'Ovid MeSH Subject Headings'
+    machine_name: ovid_mesh_subject_headings
+    value: 'F[@C="sh"]/D'
+    raw: false
+    inner: false
+    type: xml
+  ovid_doi:
+    label: 'Ovid DOI'
+    machine_name: ovid_doi
+    value: 'F[@C="do"]/D'
+    raw: false
+    inner: false
+    type: xml
+  ovid_unique_identifier:
+    label: 'Ovid Unique Identifier'
+    machine_name: ovid_unique_identifier
+    value: 'F[@C="ui"]/D'
+    raw: false
+    inner: false
+    type: xml
+mappings:
+  -
+    target: field_ais_abstract
+    map:
+      value: ovid_abstract
+    settings:
+      language: null
+  -
+    target: field_ais_journal_name
+    map:
+      value: ovid_journal_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_ais_title
+    map:
+      value: ovid_title
+    settings:
+      language: null
+  -
+    target: field_ais_subject_headings
+    map:
+      value: ovid_mesh_subject_headings
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_ais_study
+    map:
+      target_id: 'parent:field_ais_study'
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+      autocreate_bundle: ais_study
+  -
+    target: field_pmid
+    map:
+      value: ovid_unique_identifier
+    settings:
+      language: null
+    unique: {  }

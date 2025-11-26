@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.ais_document_import
+    - node.type.ais_agreement
+    - node.type.ais_assignment
+    - node.type.ais_consensus
+    - node.type.ais_document
+    - node.type.ais_study
+    - node.type.ais_subject_analysis
+  module:
+    - feeds
+    - indexing_study
+    - node
+    - system
+id: is_manager
+label: 'Manager (indexing study)'
+weight: 5
+is_admin: false
+permissions:
+  - 'add documents'
+  - 'analyze documents'
+  - 'assign documents'
+  - 'clear ais_document_import feeds'
+  - 'create agreement'
+  - 'create ais_agreement content'
+  - 'create ais_assignment content'
+  - 'create ais_consensus content'
+  - 'create ais_document content'
+  - 'create ais_document_import feeds'
+  - 'create ais_study content'
+  - 'create ais_subject_analysis content'
+  - 'create consensus'
+  - 'delete ais_document_import feeds'
+  - 'delete any ais_agreement content'
+  - 'delete any ais_assignment content'
+  - 'delete any ais_consensus content'
+  - 'delete any ais_document content'
+  - 'delete any ais_study content'
+  - 'delete any ais_subject_analysis content'
+  - 'edit any ais_agreement content'
+  - 'edit any ais_assignment content'
+  - 'edit any ais_consensus content'
+  - 'edit any ais_document content'
+  - 'edit any ais_study content'
+  - 'edit any ais_subject_analysis content'
+  - 'import ais_document_import feeds'
+  - 'revert ais_agreement revisions'
+  - 'revert ais_assignment revisions'
+  - 'revert ais_consensus revisions'
+  - 'revert ais_document revisions'
+  - 'revert ais_study revisions'
+  - 'revert ais_subject_analysis revisions'
+  - 'unlock ais_document_import feeds'
+  - 'view ais_agreement revisions'
+  - 'view ais_assignment revisions'
+  - 'view ais_consensus revisions'
+  - 'view ais_document revisions'
+  - 'view ais_document_import feeds'
+  - 'view ais_study revisions'
+  - 'view ais_subject_analysis revisions'
+  - 'view own ais_document_import feeds'
+  - 'view the administration theme'

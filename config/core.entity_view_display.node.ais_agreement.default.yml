@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ais_agreement.field_ais_agreement
+    - field.field.node.ais_agreement.field_ais_consensus
+    - field.field.node.ais_agreement.field_ais_disagreement_type
+    - field.field.node.ais_agreement.field_ais_document
+    - field.field.node.ais_agreement.field_ais_notes
+    - node.type.ais_agreement
+  module:
+    - options
+    - user
+id: node.ais_agreement.default
+targetEntityType: node
+bundle: ais_agreement
+mode: default
+content:
+  field_ais_agreement:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ais_consensus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_ais_disagreement_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ais_document:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ais_notes:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

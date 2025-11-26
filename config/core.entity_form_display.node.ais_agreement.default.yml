@@ -1,0 +1,91 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ais_agreement.field_ais_agreement
+    - field.field.node.ais_agreement.field_ais_consensus
+    - field.field.node.ais_agreement.field_ais_disagreement_type
+    - field.field.node.ais_agreement.field_ais_document
+    - field.field.node.ais_agreement.field_ais_notes
+    - node.type.ais_agreement
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_administrative:
+      children:
+        - field_ais_document
+        - field_ais_consensus
+      label: Administrative
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+id: node.ais_agreement.default
+targetEntityType: node
+bundle: ais_agreement
+mode: default
+content:
+  field_ais_agreement:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ais_consensus:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ais_disagreement_type:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ais_document:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ais_notes:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

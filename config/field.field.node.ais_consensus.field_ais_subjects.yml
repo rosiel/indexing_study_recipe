@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ais_subjects
+    - node.type.ais_consensus
+id: node.ais_consensus.field_ais_subjects
+field_name: field_ais_subjects
+entity_type: node
+bundle: ais_consensus
+label: 'Consensus Subjects'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

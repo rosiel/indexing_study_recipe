@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'AIS - Study'
+type: ais_study
+description: 'A collection of documents. As part of the study, each document is assigned to multiple reviewers, reviewed for subject analysis, inter-reviewer consensus is achieved, then the resulting consensus is matched to the assigned headings to test for agreement.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

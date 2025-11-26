@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ais_agreement
+    - node.type.ais_agreement
+id: node.ais_agreement.field_ais_agreement
+field_name: field_ais_agreement
+entity_type: node
+bundle: ais_agreement
+label: 'All consensus subjects are represented?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

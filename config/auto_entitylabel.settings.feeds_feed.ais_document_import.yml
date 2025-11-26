@@ -1,0 +1,10 @@
+status: 1
+pattern: 'Import [current-date:html_datetime]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - feeds.feed_type.ais_document_import
+new_content_behavior: 0

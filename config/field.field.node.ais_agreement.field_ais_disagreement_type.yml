@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ais_disagreement_type
+    - node.type.ais_agreement
+  module:
+    - options
+id: node.ais_agreement.field_ais_disagreement_type
+field_name: field_ais_disagreement_type
+entity_type: node
+bundle: ais_agreement
+label: 'Other Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

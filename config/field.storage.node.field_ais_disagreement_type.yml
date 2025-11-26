@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_ais_disagreement_type
+field_name: field_ais_disagreement_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: concept_is_missing
+      label: 'Concept is missing from official terms'
+    -
+      value: concept_is_erroneously_present
+      label: 'Concept is erroneously present'
+    -
+      value: indexed_term_is_too_precise
+      label: 'Indexed term is too precise'
+    -
+      value: indexed_term_is_not_precise_enough
+      label: 'Indexed term is not precise enough'
+    -
+      value: robot_did_better
+      label: 'Robot did better'
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

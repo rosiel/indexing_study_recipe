@@ -1,0 +1,81 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ais_subject_analysis.field_ais_assignment
+    - field.field.node.ais_subject_analysis.field_ais_document
+    - field.field.node.ais_subject_analysis.field_ais_subjects
+    - node.type.ais_subject_analysis
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_administrative:
+      children:
+        - field_ais_document
+        - field_ais_assignment
+      label: Administrative
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+id: node.ais_subject_analysis.default
+targetEntityType: node
+bundle: ais_subject_analysis
+mode: default
+content:
+  field_ais_assignment:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      orderable: true
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ais_document:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      orderable: true
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ais_subjects:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      orderable: false
+      size: 80
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      orderable: true
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

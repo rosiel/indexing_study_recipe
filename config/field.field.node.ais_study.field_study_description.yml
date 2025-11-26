@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_study_description
+    - node.type.ais_study
+id: node.ais_study.field_study_description
+field_name: field_study_description
+entity_type: node
+bundle: ais_study
+label: 'Study Description'
+description: 'For disambiguating the context of this study from other studies.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

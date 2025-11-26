@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'AIS - Subject Analysis'
+type: ais_subject_analysis
+description: 'Created by a reviewer, this holds the subjects that reviewer thinks are applicable. Multiple subject analyses are combined into a consensus.'
+help: null
+new_revision: false
+preview_mode: 0
+display_submitted: true

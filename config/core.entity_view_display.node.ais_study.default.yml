@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ais_study.field_ais_participants
+    - field.field.node.ais_study.field_study_description
+    - node.type.ais_study
+  module:
+    - user
+id: node.ais_study.default
+targetEntityType: node
+bundle: ais_study
+mode: default
+content:
+  field_ais_participants:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_study_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
