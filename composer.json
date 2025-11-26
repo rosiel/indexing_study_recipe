@@ -14,7 +14,7 @@
     "drupal/views_core_entity_reference": "^1.0@alpha",
     "drupal/views_data_export": "^1.8",
     "rosiel/indexing_study": "2.x-dev",
-    "rosiel/mesh_formatter": "dev-main" 
+    "rosiel/mesh_formatter": "^1" 
   },
   "suggest": {
   },
