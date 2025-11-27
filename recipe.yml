@@ -19,6 +19,7 @@ install:
   - rest
   - serialization
   - system
+  - token
   - user
   - views
   - views_data_export
