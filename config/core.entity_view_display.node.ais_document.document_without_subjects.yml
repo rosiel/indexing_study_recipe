@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.document_without_subjects
+    - field.field.node.ais_document.feeds_item
+    - field.field.node.ais_document.field_ais_abstract
+    - field.field.node.ais_document.field_ais_journal_name
+    - field.field.node.ais_document.field_ais_study
+    - field.field.node.ais_document.field_ais_subject_headings
+    - field.field.node.ais_document.field_ais_title
+    - field.field.node.ais_document.field_pmid
+    - node.type.ais_document
+  module:
+    - user
+id: node.ais_document.document_without_subjects
+targetEntityType: node
+bundle: ais_document
+mode: document_without_subjects
+content:
+  field_ais_abstract:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ais_journal_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ais_title:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  feeds_item: true
+  field_ais_study: true
+  field_ais_subject_headings: true
+  field_pmid: true

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.document_without_subjects
+label: 'Document Without Subjects'
+description: 'Hide the subjects field for display on the Subject Analysis form.'
+targetEntityType: node
+cache: true

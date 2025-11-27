@@ -1,0 +1,10 @@
+status: 1
+pattern: '[node:field_ais_title]'
+escape: true
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.ais_document
+new_content_behavior: 0

@@ -177,3 +177,6 @@ config:
         - 'view ais_consensus revisions'
         - 'view ais_subject_analysis revisions'
         - 'view the administration theme'
+    system.site:
+      simpleConfigUpdate:
+        page.front: '/studies'

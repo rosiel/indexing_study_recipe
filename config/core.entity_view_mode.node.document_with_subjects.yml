@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.document_with_subjects
+label: 'Document With Subjects'
+description: null
+targetEntityType: node
+cache: true
